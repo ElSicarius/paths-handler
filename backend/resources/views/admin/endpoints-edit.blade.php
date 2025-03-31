@@ -38,15 +38,11 @@
     <label class="form-check-label">Active?</label>
   </div>
 
-  <div class="mb-3">
+  <!-- Doesn't work (yet) -->
+  <!-- <div class="mb-3">
     <label class="form-label">Params JSON</label>
     <textarea class="form-control" name="params_json" rows="2">{{ $endpoint->params_json }}</textarea>
-  </div>
-
-  <div class="mb-3">
-    <label class="form-label">Response JSON</label>
-    <textarea class="form-control" name="response_json" rows="2">{{ $endpoint->response_json }}</textarea>
-  </div>
+  </div> -->
 
   <!-- RESPONSE BODY with CodeMirror -->
   <div class="mb-3">
@@ -65,10 +61,11 @@
     <input class="form-control" name="status_code" value="{{ $endpoint->status_code ?? '200' }}" />
   </div>
 
-  <div class="mb-3">
+  <!-- Doesn't work :( -->
+  <!-- <div class="mb-3">
     <label class="form-label">Status Message</label>
     <input class="form-control" name="status_message" value="{{ $endpoint->status_message }}" />
-  </div>
+  </div> -->
 
   <!-- HEADERS JSON with CodeMirror -->
   <div class="mb-3">
