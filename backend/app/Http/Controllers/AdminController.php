@@ -14,8 +14,8 @@ class AdminController extends BaseController
 
     public function __construct()
     {
-        $this->demoUsername = $_ENV['UI_USER'] ?? 'admin';
-        $this->demoPassword = $_ENV['UI_password'] ?? 'YeahItsInClearWhatYouGonnaDo';
+        $this->demoUsername = env('UI_USER', 'admin');
+        $this->demoPassword = env('UI_PASSWORD', 'YeahItsInClearWhatYouGonnaDo');
     }
 
     // ---------- Auth ----------
