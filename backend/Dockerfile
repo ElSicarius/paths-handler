@@ -23,6 +23,8 @@ COPY . /var/www
 # Installation des dépendances PHP (Lumen, etc.)
 RUN composer install --optimize-autoloader --no-interaction
 
+RUN echo "expose_php=Off" > /usr/local/etc/php/conf.d/hidepoweredby.ini
+
 # Permission si nécessaire (sur dev)
 RUN chown -R www-data:www-data /var/www
 

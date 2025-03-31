@@ -9,8 +9,14 @@ use App\Models\Log;
 
 class AdminController extends BaseController
 {
-    private $demoUsername = 'admin';
-    private $demoPassword = 'YeahItsInClearWhatYouGonnaDo?';
+    private $demoUsername;
+    private $demoPassword;
+
+    public function __construct()
+    {
+        $this->demoUsername = $_ENV['UI_USER'] ?? 'admin';
+        $this->demoPassword = $_ENV['UI_password'] ?? 'YeahItsInClearWhatYouGonnaDo';
+    }
 
     // ---------- Auth ----------
     public function showLoginForm(Request $request)
