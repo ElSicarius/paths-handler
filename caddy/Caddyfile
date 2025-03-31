@@ -1,0 +1,8 @@
+:80 {
+    reverse_proxy backend:8000
+}
+
+yourdomain:443{
+    tls admin@yourdomain
+    reverse_proxy backend:8000
+}
